@@ -1,6 +1,6 @@
 # Learning-on-ULearn.me
 Обучение на ULearn.me.<br>
-Ссылка на сайт: https://ulearn.me/
+Ссылка на сайт: https://ulearn.me
 
 ## [Основы программирования на примере C#. Часть 1](https://ulearn.me/Course/BasicProgramming)
 Длительность курса: 1 семестр, 3–6 часов в неделю.
