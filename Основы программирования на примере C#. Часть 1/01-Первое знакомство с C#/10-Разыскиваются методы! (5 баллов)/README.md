@@ -1,3 +1,27 @@
-# Learning-on-ULearn.me
-Learning on ULearn.me
-https://ulearn.me/
+# Разыскиваются методы!
+
+Напишите тело метода так, чтобы он возвращал вторую половину строки `text`, из которой затем удалены пробелы. Можете считать, что `text` всегда четной длины.
+
+Всю информацию о доступных методах класса `String` вы можете прочитать в официальной документации .NET
+
+```
+public static void Main()
+{
+	Console.WriteLine(GetLastHalf("I love CSharp!"));
+	Console.WriteLine(GetLastHalf("1234567890"));
+	Console.WriteLine(GetLastHalf("до ре ми фа соль ля си"));
+}
+```
+
+Все тесты пройдены, задача сдана:
+```
+static string GetLastHalf(string text)
+{ return text.Substring(text.Length/2).Replace(" ", null); }
+```
+
+Вывод программы:
+```
+CSharp!
+67890
+сольляси
+```
