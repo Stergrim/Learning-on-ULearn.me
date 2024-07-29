@@ -29,7 +29,7 @@ namespace Slide01
 
 Компилируя другую программу Вася получил следующее сообщение при компиляции:
 
-```
+```cs
 Controller.cs(9,4,9,15): error CS1501: No overload for method 'Min' takes 1 arguments
 ```
 
