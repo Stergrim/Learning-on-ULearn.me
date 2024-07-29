@@ -74,8 +74,8 @@ namespace RefactorMe
             var diagonal_length = Math.Sqrt(2) * (sz * 0.375f + sz * 0.04f) / 2;
             var x0 = (float)(diagonal_length * Math.Cos(Math.PI / 4 + Math.PI)) + width / 2f;
             var y0 = (float)(diagonal_length * Math.Sin(Math.PI / 4 + Math.PI)) + height / 2f;
-			var colorLine = new Pen(Brushes.Yellow);
-			Drawing.SetPosition(x0, y0);
+	    var colorLine = new Pen(Brushes.Yellow);
+	    Drawing.SetPosition(x0, y0);
             //Рисуем 1-ую сторону
             Drawing.DrawLine(colorLine, sz, 0);
             //Рисуем 2-ую сторону
