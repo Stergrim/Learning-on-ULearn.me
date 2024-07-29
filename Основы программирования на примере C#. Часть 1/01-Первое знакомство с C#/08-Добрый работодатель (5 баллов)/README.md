@@ -8,7 +8,7 @@
 
 Во многих редакторах и IDE сочетание клавиш `Ctrl + Space` показывает контекстную подсказку. Тут подсказки также работают, однако внутри Visual Studio они гораздо полнее и удобнее.
 
-```
+```cs
 public static void Main()
 {
 	Console.WriteLine(GetGreetingMessage("Student", 10.01));
@@ -18,13 +18,13 @@ public static void Main()
 ```
 
 Все тесты пройдены, задача сдана:
-```
+```cs
 private static string GetGreetingMessage(string name, double salary)
 { return "Hello, " + name + ", your salary is " + Math.Ceiling(salary).ToString(); }
 ```
 
 Вывод программы:
-```
+```cs
 Hello, Student, your salary is 11
 Hello, Bill Gates, your salary is 10000001
 Hello, Steve Jobs, your salary is 1
