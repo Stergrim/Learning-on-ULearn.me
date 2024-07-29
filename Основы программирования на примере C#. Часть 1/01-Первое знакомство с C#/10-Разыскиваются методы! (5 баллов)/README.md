@@ -4,7 +4,7 @@
 
 Всю информацию о доступных методах класса `String` вы можете прочитать в официальной документации .NET
 
-```
+```cs
 public static void Main()
 {
 	Console.WriteLine(GetLastHalf("I love CSharp!"));
@@ -14,13 +14,13 @@ public static void Main()
 ```
 
 Все тесты пройдены, задача сдана:
-```
+```cs
 static string GetLastHalf(string text)
 { return text.Substring(text.Length/2).Replace(" ", null); }
 ```
 
 Вывод программы:
-```
+```cs
 CSharp!
 67890
 сольляси
