@@ -4,7 +4,7 @@
 
 Реализуйте метод `GetMinX` для нахождения такого числа ***x***, при котором кривая, заданная уравнением
 
-$$ \displaystyle\ RMS = \sqrt\frac{\sum [(x-x_0)^2+(y-y_0)^2]}{H\times W (H\times W - 1)} $$,
+$$ \displaystyle\ RMS = \sqrt\frac{\sum [(x-x_0)^2+(y-y_0)^2]}{H\times W (H\times W - 1)} $$
 
 принимает минимальное значение.
 
