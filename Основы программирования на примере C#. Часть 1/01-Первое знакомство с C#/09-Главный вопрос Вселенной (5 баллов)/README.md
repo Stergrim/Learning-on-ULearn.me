@@ -6,7 +6,7 @@
 
 Создайте два метода `Print` и `GetSquare`, так, чтобы код снизу заработал. Если забыли синтаксис определения методов — подсмотрите в видеолекции или в предыдущие задачи.
 
-```
+```cs
 public static void Main()
 {
 	Print(GetSquare(42));
@@ -14,13 +14,13 @@ public static void Main()
 ```
 
 Все тесты пройдены, задача сдана:
-```
+```cs
 private static double GetSquare(int a) { return Math.Pow(a , 2); }
 
 private static void Print(double a) { Console.WriteLine(a); }
 ```
 
 Вывод программы:
-```
+```cs
 1764
 ```
