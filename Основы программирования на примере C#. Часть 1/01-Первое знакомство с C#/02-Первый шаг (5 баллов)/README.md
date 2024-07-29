@@ -9,12 +9,12 @@
 Считайте, что инструкции using и namespace уже написаны за вас, осталось написать только тело метода.
 
 Все тесты пройдены, задача сдана:
-```
+```cs
 public static void Main()
 { Console.WriteLine("The first step!"); }
 ```
 
 Вывод программы:
-```
+```cs
 The first step!
 ```
