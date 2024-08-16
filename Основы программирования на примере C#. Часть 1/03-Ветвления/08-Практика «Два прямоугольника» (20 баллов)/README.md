@@ -47,7 +47,7 @@ namespace Rectangles
 			else if (AreIntersectedRightDown(r1, r2))
 				return Math.Min(r2.Top + r2.Height - r1.Top, r1.Height)*
 					   Math.Min(r1.Left + r1.Width - r2.Left, r2.Width);
-            else return 0;
+            	else return 0;
 		}
 		
 		public static bool AreIntersectedLeftTop(Rectangle r1, Rectangle r2)
@@ -92,8 +92,8 @@ namespace Rectangles
 					   (r2.Top <= r1.Top)) &&
 					 (((r2.Left + r2.Width) >= (r1.Left + r1.Width)) &&
 					   (r2.Left <= r1.Left))) return 0;
-            else return -1;
-        }
+            	else return -1;
+        	}
 	}
 }
 ```
