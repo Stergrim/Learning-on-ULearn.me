@@ -17,14 +17,14 @@ namespace DistanceTask
 	public static class DistanceTask
 	{
 		public static double GetDistanceToSegment(double ax, double ay,
-												  double bx, double by,
-												  double x,  double y)
+							  double bx, double by,
+							  double x,  double y)
 		{
-            double x0 = 0;
+            		double x0 = 0;
 			double y0 = 0;
 
-            if (ax == bx) return GetDistanceAxEqualBx(ax, ay, bx, by, x, y, x0, y0);
-            if (ay == by) return GetDistanceAyEqualBy(ax, ay, bx, by, x, y, x0, y0);
+			if (ax == bx) return GetDistanceAxEqualBx(ax, ay, bx, by, x, y, x0, y0);
+            		if (ay == by) return GetDistanceAyEqualBy(ax, ay, bx, by, x, y, x0, y0);
 			
 			double b1 = ay - ((ay - by) / (ax - bx)) * ax;
 			double b2 = y - (-1.0 / ((ay - by) / (ax - bx))) * x;
@@ -38,9 +38,9 @@ namespace DistanceTask
 		}
 		
 		public static double GetDistanceAxEqualBx(double ax, double ay,
-												  double bx, double by,
-												  double x,  double y,
-												  double x0, double y0)
+							  double bx, double by,
+							  double x,  double y,
+							  double x0, double y0)
 		{
 			x0 = ax;
 			if (y <= Math.Min(ay, by)) y0 = Math.Min(ay, by);
@@ -50,9 +50,9 @@ namespace DistanceTask
 		}
 
 		public static double GetDistanceAyEqualBy(double ax, double ay,
-												  double bx, double by,
-												  double x,  double y,
-												  double x0, double y0)
+							  double bx, double by,
+							  double x,  double y,
+							  double x0, double y0)
 		{
 			y0 = ay;
 			if (x <= Math.Min(ax, bx)) x0 = Math.Min(ax, bx);
