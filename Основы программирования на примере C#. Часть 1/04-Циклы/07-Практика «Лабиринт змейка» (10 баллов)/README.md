@@ -30,8 +30,8 @@ namespace Mazes
 			int k = 1;
 			int c = (height - 1) / 2;
 			while (k <= c)
-                	if (k % 2 != 0) k = MoveUnEven(robot, width, k);
-                	else k = MoveEven(robot, width, k, c);
+                		if (k % 2 != 0) k = MoveUnEven(robot, width, k);
+                		else k = MoveEven(robot, width, k, c);
 		}
 		
 		public static void MoveDownTwice(Robot robot)
