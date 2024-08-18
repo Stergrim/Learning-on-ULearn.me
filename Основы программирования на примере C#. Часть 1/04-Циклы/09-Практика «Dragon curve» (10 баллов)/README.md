@@ -43,14 +43,14 @@ namespace Fractals
 	{
 		public static void DrawDragonFractal(Pixels pixels, int iterationsCount, int seed)
 		{
-		    var random = new Random(seed);
-            double x = 1;
-            double y = 0;
-            double xTemp = x;
-		    double yTemp = y;
-		    pixels.SetPixel(x, y);
+			var random = new Random(seed);
+			double x = 1;
+			double y = 0;
+            		double xTemp = x;
+			double yTemp = y;
+			pixels.SetPixel(x, y);
 
-            for (int i = 0; i < iterationsCount; i++)
+			for (int i = 0; i < iterationsCount; i++)
 			{
 			    bool even = random.Next() % 2 == 0;
 			    x = GetX(xTemp, yTemp, even);
@@ -63,22 +63,14 @@ namespace Fractals
 		
 		public static double GetX(double x, double y, bool even)
 		{
-			if (even) return (double)(x * Math.Cos(Math.PI / 4) -
-									  y * Math.Sin(Math.PI / 4)) /
-				  					  Math.Sqrt(2);
-			else return (double) (x * Math.Cos(Math.PI - Math.PI / 4) -
-								  y * Math.Sin(Math.PI - Math.PI / 4)) /
-								  Math.Sqrt(2) + 1;
+			if (even) return (double)(x * Math.Cos(Math.PI / 4) - y * Math.Sin(Math.PI / 4)) / Math.Sqrt(2);
+			else return (double) (x * Math.Cos(Math.PI - Math.PI / 4) - y * Math.Sin(Math.PI - Math.PI / 4)) / Math.Sqrt(2) + 1;
 		}
 
 		public static double GetY(double x, double y, bool even)
 		{
-			if (even) return (double)(x * Math.Sin(Math.PI / 4) +
-									  y * Math.Cos(Math.PI / 4)) /
-									  Math.Sqrt(2);
-			else return (double)(x * Math.Sin(Math.PI - Math.PI / 4) +
-								 y * Math.Cos(Math.PI - Math.PI / 4)) /
-								 Math.Sqrt(2);
+			if (even) return (double)(x * Math.Sin(Math.PI / 4) + y * Math.Cos(Math.PI / 4)) / Math.Sqrt(2);
+			else return (double)(x * Math.Sin(Math.PI - Math.PI / 4) + y * Math.Cos(Math.PI - Math.PI / 4)) / Math.Sqrt(2);
 		}
 	}
 }
