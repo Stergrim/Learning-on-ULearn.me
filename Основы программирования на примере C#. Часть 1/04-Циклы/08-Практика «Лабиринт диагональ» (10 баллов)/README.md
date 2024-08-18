@@ -16,30 +16,29 @@ namespace Mazes
 {
 	public static class DiagonalMazeTask
 	{
-        public static void MoveWidth(Robot robot, int width, int height, int c)
-        {
-            for (int i = 1; i < width-2; i++)
-            {
-                robot.MoveTo(Direction.Right);
-                if ((i % c == 0)&&(i < width - 3)) robot.MoveTo(Direction.Down);
-            }
-        }
-
-        public static void MoveHeight(Robot robot, int width, int height, int c)
-        {
-            for (int i = 1; i < height-2; i++)
-            {
-                robot.MoveTo(Direction.Down);
-                if ((i % c == 0)&&(i < height - 3)) robot.MoveTo(Direction.Right);
-            }
+	        public static void MoveWidth(Robot robot, int width, int height, int c)
+	        {
+	            for (int i = 1; i < width-2; i++)
+	            {
+	                robot.MoveTo(Direction.Right);
+	                if ((i % c == 0)&&(i < width - 3)) robot.MoveTo(Direction.Down);
+	            }
+	        }
+	
+	        public static void MoveHeight(Robot robot, int width, int height, int c)
+	        {
+	            for (int i = 1; i < height-2; i++)
+	            {
+	                robot.MoveTo(Direction.Down);
+	                if ((i % c == 0)&&(i < height - 3)) robot.MoveTo(Direction.Right);
+	            }
 		}
-
-        public static void MoveOut(Robot robot, int width, int height)
+	
+	        public static void MoveOut(Robot robot, int width, int height)
 		{
-			if (width >= height) MoveWidth(robot, width, height,
-										   (int)((width - 2) / (height - 2)));
-            else MoveHeight(robot, width, height, (int)((height - 2) / (width - 2)));
-        }
+			if (width >= height) MoveWidth(robot, width, height, (int)((width - 2) / (height - 2)));
+			else MoveHeight(robot, width, height, (int)((height - 2) / (width - 2)));
+	        }
 	}
 }
 ```
