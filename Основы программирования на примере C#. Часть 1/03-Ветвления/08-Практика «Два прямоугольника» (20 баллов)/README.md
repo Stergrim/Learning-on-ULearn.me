@@ -23,77 +23,77 @@ using System;
 
 namespace Rectangles
 {
-	public static class RectanglesTask
-	{
-		public static bool AreIntersected(Rectangle r1, Rectangle r2)
-		{
-			if (AreIntersectedLeftTop(r1, r2)) return true;
-			else if (AreIntersectedLeftDown(r1, r2)) return true;
-			else if (AreIntersectedRightTop(r1, r2)) return true;
-			return AreIntersectedRightDown(r1, r2);
-		}
-
-		public static int IntersectionSquare(Rectangle r1, Rectangle r2)
-		{
-			if (AreIntersectedLeftTop(r1, r2))
-				return Math.Min(r1.Top + r1.Height - r2.Top, r2.Height)*
-					   Math.Min(r1.Left + r1.Width - r2.Left, r2.Width);
-			else if (AreIntersectedLeftDown(r1, r2))
-				return Math.Min(r2.Top + r2.Height - r1.Top, r1.Height)*
-					   Math.Min(r2.Left + r2.Width - r1.Left, r1.Width);
-			else if (AreIntersectedRightTop(r1, r2))
-				return Math.Min(r1.Top + r1.Height - r2.Top, r2.Height)*
-					   Math.Min(r2.Left + r2.Width - r1.Left, r1.Width);
-			else if (AreIntersectedRightDown(r1, r2))
-				return Math.Min(r2.Top + r2.Height - r1.Top, r1.Height)*
-					   Math.Min(r1.Left + r1.Width - r2.Left, r2.Width);
-            	else return 0;
-		}
-		
-		public static bool AreIntersectedLeftTop(Rectangle r1, Rectangle r2)
-		{ 
-			return (((r1.Top + r1.Height) >= r2.Top) &&
-				  	 (r1.Top <= r2.Top)) &&
-				   (((r1.Left + r1.Width) >= r2.Left) &&
-					 (r1.Left <= r2.Left));
-		}
-		
-		public static bool AreIntersectedLeftDown(Rectangle r1, Rectangle r2)
-		{ 
-			return (((r2.Top + r2.Height) >= r1.Top) &&
-					 (r2.Top <= r1.Top)) &&
-				   (((r2.Left + r2.Width) >= r1.Left) &&
-					 (r2.Left <= r1.Left));
-		}
-		
-		public static bool AreIntersectedRightTop(Rectangle r1, Rectangle r2)
-		{ 
-			return (((r1.Top + r1.Height) >= r2.Top) &&
-					  (r1.Top <= r2.Top)) &&
-					(((r2.Left + r2.Width) >= r1.Left) &&
-					  (r1.Left >= r2.Left));
-		}
-		
-		public static bool AreIntersectedRightDown(Rectangle r1, Rectangle r2)
-		{ 
-			return (((r2.Top + r2.Height) >= r1.Top) &&
-					 (r1.Top >= r2.Top)) &&
-				   (((r1.Left + r1.Width) >= r2.Left) &&
-					 (r1.Left <= r2.Left));
-		}
-		
-		public static int IndexOfInnerRectangle(Rectangle r1, Rectangle r2)
-		{
-			if ((((r1.Top + r1.Height) >= (r2.Top + r2.Height)) &&
-				  (r1.Top <= r2.Top)) &&
-				(((r1.Left + r1.Width) >= (r2.Left + r2.Width)) &&
-				  (r1.Left <= r2.Left))) return 1;
-			else if ((((r2.Top + r2.Height) >= (r1.Top + r1.Height)) &&
-					   (r2.Top <= r1.Top)) &&
-					 (((r2.Left + r2.Width) >= (r1.Left + r1.Width)) &&
-					   (r2.Left <= r1.Left))) return 0;
-            	else return -1;
-        	}
-	}
+    public static class RectanglesTask
+    {
+        public static bool AreIntersected(Rectangle r1, Rectangle r2)
+        {
+            if (AreIntersectedLeftTop(r1, r2)) return true;
+            else if (AreIntersectedLeftDown(r1, r2)) return true;
+            else if (AreIntersectedRightTop(r1, r2)) return true;
+            return AreIntersectedRightDown(r1, r2);
+        }
+    
+        public static int IntersectionSquare(Rectangle r1, Rectangle r2)
+        {
+            if (AreIntersectedLeftTop(r1, r2))
+                return Math.Min(r1.Top + r1.Height - r2.Top, r2.Height)*
+                       Math.Min(r1.Left + r1.Width - r2.Left, r2.Width);
+            else if (AreIntersectedLeftDown(r1, r2))
+                return Math.Min(r2.Top + r2.Height - r1.Top, r1.Height)*
+                       Math.Min(r2.Left + r2.Width - r1.Left, r1.Width);
+            else if (AreIntersectedRightTop(r1, r2))
+                return Math.Min(r1.Top + r1.Height - r2.Top, r2.Height)*
+                       Math.Min(r2.Left + r2.Width - r1.Left, r1.Width);
+            else if (AreIntersectedRightDown(r1, r2))
+                return Math.Min(r2.Top + r2.Height - r1.Top, r1.Height)*
+                       Math.Min(r1.Left + r1.Width - r2.Left, r2.Width);
+            else return 0;
+        }
+        
+        public static bool AreIntersectedLeftTop(Rectangle r1, Rectangle r2)
+        { 
+            return (((r1.Top + r1.Height) >= r2.Top) &&
+                     (r1.Top <= r2.Top)) &&
+                   (((r1.Left + r1.Width) >= r2.Left) &&
+                     (r1.Left <= r2.Left));
+        }
+        
+        public static bool AreIntersectedLeftDown(Rectangle r1, Rectangle r2)
+        { 
+            return (((r2.Top + r2.Height) >= r1.Top) &&
+                     (r2.Top <= r1.Top)) &&
+                   (((r2.Left + r2.Width) >= r1.Left) &&
+                     (r2.Left <= r1.Left));
+        }
+        
+        public static bool AreIntersectedRightTop(Rectangle r1, Rectangle r2)
+        { 
+            return (((r1.Top + r1.Height) >= r2.Top) &&
+                      (r1.Top <= r2.Top)) &&
+                    (((r2.Left + r2.Width) >= r1.Left) &&
+                      (r1.Left >= r2.Left));
+        }
+        
+        public static bool AreIntersectedRightDown(Rectangle r1, Rectangle r2)
+        { 
+            return (((r2.Top + r2.Height) >= r1.Top) &&
+                     (r1.Top >= r2.Top)) &&
+                   (((r1.Left + r1.Width) >= r2.Left) &&
+                     (r1.Left <= r2.Left));
+        }
+        
+        public static int IndexOfInnerRectangle(Rectangle r1, Rectangle r2)
+        {
+            if ((((r1.Top + r1.Height) >= (r2.Top + r2.Height)) &&
+                  (r1.Top <= r2.Top)) &&
+                (((r1.Left + r1.Width) >= (r2.Left + r2.Width)) &&
+                  (r1.Left <= r2.Left))) return 1;
+            else if ((((r2.Top + r2.Height) >= (r1.Top + r1.Height)) &&
+                       (r2.Top <= r1.Top)) &&
+                     (((r2.Left + r2.Width) >= (r1.Left + r1.Width)) &&
+                       (r2.Left <= r1.Left))) return 0;
+            else return -1;
+        }
+    }
 }
 ```
