@@ -1,4 +1,4 @@
-# Практика «Пороговый фильтр»
+# Практика «Фильтр Собеля»
 
 Продолжайте [в том же проекте](image.zip).
 
@@ -26,23 +26,23 @@ namespace Recognizer
             var result = new double[width, height];
             
             var sy = GetSy(sx, lsx, lsy);
-        
+    
             for (int x = (int)(lsy / 2); x < width - (int)(lsy / 2); x++)
                 for (int y = (int)(lsx / 2); y < height - (int)(lsx / 2); y++)
                     result[x, y] = GetGxAndGy(g, sx, sy, x, y, lsx, lsy);
             return result;
         }
-		
+        
         public static double[,] GetSy(double[,] sx, int lsx, int lsy)
         {
             double[,] sy = new double[lsy, lsx];
             
             if ((lsy == 1) || (lsx == 1)) sy = sx;
-        
+    
             for (int i = 0; i < lsy; i++)
                 for (int j = 0; j < lsx; j++)
                     sy[i, j] = sx[i, j];
-        
+    
             double tmp = 0.0;
             for (int i = 0; i < lsy; i++)
                 for (int j = 0; j < i; j++)
@@ -53,8 +53,9 @@ namespace Recognizer
                 }
             return sy;
         }
-		
-        public static double GetGxAndGy(double[,] g, double[,] sx, double[,] sy, int x, int y, int lsx, int lsy)
+        
+        public static double GetGxAndGy(double[,] g, double[,] sx, double[,] sy,
+                                        int x, int y, int lsx, int lsy)
         {
             double gx = 0.0;
             double gy = 0.0;
