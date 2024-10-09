@@ -39,39 +39,47 @@ using System.Drawing;
 
 namespace Fractals
 {
-	internal static class DragonFractalTask
-	{
-		public static void DrawDragonFractal(Pixels pixels, int iterationsCount, int seed)
-		{
-			var random = new Random(seed);
-			double x = 1;
-			double y = 0;
-            		double xTemp = x;
-			double yTemp = y;
-			pixels.SetPixel(x, y);
-
-			for (int i = 0; i < iterationsCount; i++)
-			{
-			    bool even = random.Next() % 2 == 0;
-			    x = GetX(xTemp, yTemp, even);
-			    y = GetY(xTemp, yTemp, even);
-			    xTemp = x;
-			    yTemp = y;
-			    pixels.SetPixel(x, y);
-			}
-		}
-		
-		public static double GetX(double x, double y, bool even)
-		{
-			if (even) return (double)(x * Math.Cos(Math.PI / 4) - y * Math.Sin(Math.PI / 4)) / Math.Sqrt(2);
-			else return (double) (x * Math.Cos(Math.PI - Math.PI / 4) - y * Math.Sin(Math.PI - Math.PI / 4)) / Math.Sqrt(2) + 1;
-		}
-
-		public static double GetY(double x, double y, bool even)
-		{
-			if (even) return (double)(x * Math.Sin(Math.PI / 4) + y * Math.Cos(Math.PI / 4)) / Math.Sqrt(2);
-			else return (double)(x * Math.Sin(Math.PI - Math.PI / 4) + y * Math.Cos(Math.PI - Math.PI / 4)) / Math.Sqrt(2);
-		}
-	}
+    internal static class DragonFractalTask
+    {
+        public static void DrawDragonFractal(Pixels pixels, int iterationsCount, int seed)
+        {
+            var random = new Random(seed);
+            double x = 1;
+            double y = 0;
+            double xTemp = x;
+            double yTemp = y;
+            pixels.SetPixel(x, y);
+    
+            for (int i = 0; i < iterationsCount; i++)
+            {
+                bool even = random.Next() % 2 == 0;
+                x = GetX(xTemp, yTemp, even);
+                y = GetY(xTemp, yTemp, even);
+                xTemp = x;
+                yTemp = y;
+                pixels.SetPixel(x, y);
+            }
+        }
+        
+        public static double GetX(double x, double y, bool even)
+        {
+            if (even) return (double)(x * Math.Cos(Math.PI / 4) -
+                                      y * Math.Sin(Math.PI / 4)) /
+                                      Math.Sqrt(2);
+            else return (double) (x * Math.Cos(Math.PI - Math.PI / 4) -
+                                  y * Math.Sin(Math.PI - Math.PI / 4)) /
+                                  Math.Sqrt(2) + 1;
+        }
+    
+        public static double GetY(double x, double y, bool even)
+        {
+            if (even) return (double)(x * Math.Sin(Math.PI / 4) +
+                                      y * Math.Cos(Math.PI / 4)) /
+                                      Math.Sqrt(2);
+            else return (double)(x * Math.Sin(Math.PI - Math.PI / 4) +
+                                 y * Math.Cos(Math.PI - Math.PI / 4)) /
+                                 Math.Sqrt(2);
+        }
+    }
 }
 ```
