@@ -15,12 +15,14 @@ namespace Autocomplete
 {
     public class RightBorderTask
     {
-        public static int GetRightBorderIndex(IReadOnlyList<string> phrases, string prefix, int left, int right)
+        public static int GetRightBorderIndex(IReadOnlyList<string> phrases, string prefix,
+                                              int left, int right)
         {
             int m = (right - left) / 2 + left;
             while (left + 1 < right)
             {
-                if (string.Compare(prefix, phrases[m], StringComparison.InvariantCultureIgnoreCase) >= 0 || 
+                if (string.Compare(prefix, phrases[m], 
+                                   StringComparison.InvariantCultureIgnoreCase) >= 0 || 
                     phrases[m].StartsWith(prefix, StringComparison.InvariantCultureIgnoreCase))
                     left = m;
                 else right = m;
