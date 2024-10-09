@@ -36,10 +36,10 @@
 public static double Calculate(string userInput)
 {
     string[] sub = userInput.Split(' ');
-	var sum = Convert.ToDouble(sub[0]);
-	var prosent = Convert.ToDouble(sub[1]);
-	var time = Convert.ToDouble(sub[2]);
-	sum = Math.Pow(1 + prosent / (12 * 100), time) * sum;
-	return sum;
+    var sum = Convert.ToDouble(sub[0]);
+    var prosent = Convert.ToDouble(sub[1]);
+    var time = Convert.ToDouble(sub[2]);
+    sum = Math.Pow(1 + prosent / (12 * 100), time) * sum;
+    return sum;
 }
 ```
