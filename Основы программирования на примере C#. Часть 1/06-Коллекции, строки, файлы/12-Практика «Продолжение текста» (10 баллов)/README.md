@@ -43,7 +43,8 @@ namespace TextAnalysis
 {
     static class TextGeneratorTask
     {
-        public static string ContinuePhrase(Dictionary<string, string> nextWords, string phraseBeginning, int wordsCount)
+        public static string ContinuePhrase(Dictionary<string, string> nextWords,
+                                            string phraseBeginning, int wordsCount)
         {
             List<string> str = new List<string>();
             string[] temp = phraseBeginning.Split(' ');
