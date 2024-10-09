@@ -36,7 +36,8 @@ namespace Recognizer
                     AddWindow(original, window, lenX, lenY, ref i, ref j);
                     window.Sort();
                     if (window.Count() % 2 == 0)
-                        temp[i, j] = (window[window.Count()/2] + window[(window.Count() / 2)-1])/2.0;
+                        temp[i, j] = (window[window.Count()/2] +
+                                      window[(window.Count() / 2)-1])/2.0;
                     else temp[i, j] = window[(window.Count()-1)/2];
                     window.Clear();
                     j++;
@@ -46,8 +47,9 @@ namespace Recognizer
             }
             return temp;
         }
-		
-        public static void AddWindow(double[,] original, List<double> window, int lenX, int lenY, ref int i, ref int j)
+        
+        public static void AddWindow(double[,] original, List<double> window,
+                                     int lenX, int lenY, ref int i, ref int j)
         {
             window.Add(original[i, j]);
             j++;
