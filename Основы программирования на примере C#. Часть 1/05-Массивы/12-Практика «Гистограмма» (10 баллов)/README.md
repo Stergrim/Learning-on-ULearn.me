@@ -29,16 +29,19 @@ namespace Names
         {
             double[] chastota = new double[31];
             string[] days = new string[31];
-
+    
             for (int i = 0; i < names.Length; i++)
                 if (String.Equals(names[i].Name, name))
                     chastota[names[i].BirthDate.Day - 1]++;
-
+    
             chastota[0] = 0;
             for (int i = 0; i < 31; i++)
                 days[i] = (i + 1).ToString();
-
-            return new HistogramData(string.Format("Рождаемость людей с именем '{0}'", name), days, chastota);
+    
+            return new HistogramData(
+                       string.Format("Рождаемость людей с именем '{0}'", name),
+                       days,
+                       chastota);
         }
     }
 }
