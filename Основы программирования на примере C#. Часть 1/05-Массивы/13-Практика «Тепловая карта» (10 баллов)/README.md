@@ -23,18 +23,22 @@ namespace Names
             string[] days = new string[30];
             string[] month = new string[12];
             double[,] chastota = new double[days.Length, month.Length];
-
+    
             for (int i = 0; i < names.Length; i++)
                 if (names[i].BirthDate.Day != 1)
                     chastota[names[i].BirthDate.Day - 2, names[i].BirthDate.Month - 1]++;
-
+    
             for (int i = 0; i < month.Length; i++)
                 month[i] = (i + 1).ToString();
-
+    
             for (int i = 0; i < days.Length; i++)
                 days[i] = (i + 2).ToString();
-
-            return new HeatmapData("Пример карты интенсивностей", chastota, days, month);
+    
+            return new HeatmapData(
+                       "Пример карты интенсивностей",
+                       chastota,
+                       days,
+                       month);
         }
     }
 }
