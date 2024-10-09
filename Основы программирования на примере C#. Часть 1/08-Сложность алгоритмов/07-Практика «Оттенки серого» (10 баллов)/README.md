@@ -20,10 +20,12 @@ namespace Recognizer
             int lenX = original.GetLength(0);
             int lenY = original.GetLength(1);
             var grayscale = new double[lenX, lenY];
-        
+    
             for (int i = 0; i < lenX; i++)
                 for (int j = 0; j < lenY; j++)
-                    grayscale[i, j] = (0.299 * original[i, j].R + 0.587 * original[i, j].G + 0.114 * original[i, j].B) / 255;
+                    grayscale[i, j] = (0.299 * original[i, j].R +
+                                       0.587 * original[i, j].G +
+                                       0.114 * original[i, j].B) / 255;
             return grayscale;
         }
     }
