@@ -23,12 +23,14 @@ namespace Autocomplete
 {
     public class LeftBorderTask
     {
-        public static int GetLeftBorderIndex(IReadOnlyList<string> phrases, string prefix, int left, int right)
+        public static int GetLeftBorderIndex(IReadOnlyList<string> phrases, string prefix,
+                                             int left, int right)
         {
             if (left + 1 >= right) return left;
             int m = (right - left) / 2 + left;
     
-            if (string.Compare(prefix, phrases[m], StringComparison.InvariantCultureIgnoreCase) < 0 || 
+            if (string.Compare(prefix, phrases[m],
+                               StringComparison.InvariantCultureIgnoreCase) < 0 || 
                 phrases[m].StartsWith(prefix, StringComparison.InvariantCultureIgnoreCase))
                 return GetLeftBorderIndex(phrases, prefix, left, m);
             else return GetLeftBorderIndex(phrases, prefix, m, right);
