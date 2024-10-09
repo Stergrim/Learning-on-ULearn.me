@@ -53,7 +53,7 @@ namespace TextAnalysis
             
             MakeBigrams(text, result, temp, length);
             MakeTrigrams(text, result, temp, length);
-
+    
             foreach (var dic in temp)
             {
                 int max = 0;
@@ -67,10 +67,13 @@ namespace TextAnalysis
                 result[dic.Key] = kmax;
             }
             return result;
-         }
-		
-         public static void MakeBigrams(List<List<string>> text, Dictionary<string, string> result, Dictionary<string, Dictionary<string, int>> temp, int length)
-         {
+        }
+        
+        public static void MakeBigrams(List<List<string>> text,
+                                       Dictionary<string, string> result,
+                                       Dictionary<string, Dictionary<string, int>> temp,
+                                       int length)
+        {
             for (int i = 0; i < length; i++)
             {
                 int lengthBi = text[i].Count - 1;
@@ -83,9 +86,12 @@ namespace TextAnalysis
                     else temp[text[i][j]][text[i][j + 1]] += 1;
                 }
             }
-         }
-		
-        public static void MakeTrigrams(List<List<string>> text, Dictionary<string, string> result, Dictionary<string, Dictionary<string, int>> temp, int length)
+        }
+        
+        public static void MakeTrigrams(List<List<string>> text,
+                                       Dictionary<string, string> result,
+                                       Dictionary<string, Dictionary<string, int>> temp,
+                                       int length)
         {
             for (int i = 0; i < length; i++)
             {
@@ -100,6 +106,6 @@ namespace TextAnalysis
                 }
             }
         }
-   }
+    }
 }
 ```
