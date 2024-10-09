@@ -40,9 +40,8 @@ namespace Passwords
             {
                 char[] subword = word.ToArray();
         
-                if ((!char.IsLetter(word[startIndex])) ||
-                    (word[startIndex] == 'ß') ||
-                (char.GetUnicodeCategory(word[startIndex]) != UnicodeCategory.LowercaseLetter))
+                if ((!char.IsLetter(word[startIndex])) || (word[startIndex] == 'ß') ||
+                    (char.GetUnicodeCategory(word[startIndex]) != UnicodeCategory.LowercaseLetter))
                     AlternateCharCases(subword, startIndex + 1, result);
                 else
                 {
