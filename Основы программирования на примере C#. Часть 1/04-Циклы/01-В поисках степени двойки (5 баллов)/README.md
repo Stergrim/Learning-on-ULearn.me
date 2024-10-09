@@ -23,8 +23,8 @@ public static void Main()
 private static int GetMinPowerOfTwoLargerThan(int number)
 {
     int result = 1;
-	while (result <= number)
-		result = result*2;
+    while (result <= number)
+        result = result*2;
     return result;
 }
 ```
