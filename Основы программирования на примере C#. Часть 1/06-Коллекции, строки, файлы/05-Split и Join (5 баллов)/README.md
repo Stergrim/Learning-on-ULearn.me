@@ -43,8 +43,9 @@ public static void Main()
 ```cs
 public static string ReplaceIncorrectSeparators(string text)
 {
-	var textArray = text.Split(new string[] { ": ", " - ", ", ", "; ", " " }, StringSplitOptions.RemoveEmptyEntries);
-	return string.Join("\t", textArray);
+    var textArray = text.Split(new string[] { ": ", " - ", ", ", "; ", " " }, 	
+                               StringSplitOptions.RemoveEmptyEntries);
+    return string.Join("\t", textArray);
 }
 ```
 
