@@ -4,10 +4,10 @@
 
 ```cs
 int F(int n){
-	int sum = 0;
-	for(int i=0; i<100000; i++)
-		sum += n;
-	return sum;
+   int sum = 0;
+   for(int i=0; i<100000; i++)
+     sum += n;
+   return sum;
 }
 ```
 
@@ -24,11 +24,11 @@ int F(int n){
 
 ```cs
 int F(int n){
-	int sum = 0;
-	for(int i=0; i<n; i++)
-		for(int j=0; j<i; j+=2)
-			sum += j;
-	return sum;
+   int sum = 0;
+   for(int i=0; i<n; i++)
+     for(int j=0; j<i; j+=2)
+         sum += j;
+   return sum;
 }
 ```
 
@@ -47,10 +47,10 @@ int F(int n){
 
 ```cs
 string F(int n){
-	string s = "a";
-	for(int i=0; i<n; i++)
-		s += s;
-	return s;
+   string s = "a";
+   for(int i=0; i<n; i++)
+     s += s;
+   return s;
 }
 ```
 

@@ -92,7 +92,7 @@ namespace TableParser
             Assert.AreEqual(new Token(expectedValue, startIndex, expectedLength), actualToken);
         }
     }
-
+    
     class QuotedFieldTask
     {
         public static Token ReadQuotedField(string line, int startIndex)

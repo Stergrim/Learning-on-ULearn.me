@@ -49,7 +49,7 @@ namespace Manipulation
             return new Point[] { elbowPos, wristPos, palmEndPos };
         }
     }
-
+    
     [TestFixture]
     public class AnglesToCoordinatesTask_Tests
     {

@@ -11,27 +11,27 @@
 ```cs
 public static void Main()
 {
-	TestOnSize(1);
-	TestOnSize(2);
-	TestOnSize(0);
-	TestOnSize(3);
-	TestOnSize(4);
+    TestOnSize(1);
+    TestOnSize(2);
+    TestOnSize(0);
+    TestOnSize(3);
+    TestOnSize(4);
 }
 
 static void TestOnSize(int size)
 {
-	var result = new List<int[]>();
-	MakePermutations(new int[size], 0, result);
-	foreach (var permutation in result)
-		WritePermutation(permutation);
+    var result = new List<int[]>();
+    MakePermutations(new int[size], 0, result);
+    foreach (var permutation in result)
+        WritePermutation(permutation);
 }
 
 static void WritePermutation(int[] permutation)
 {
-	var strings = new List<string>();
-	foreach (var i in permutation)
-		strings.Add(i.ToString());
-	Console.WriteLine(string.Join(" ", strings.ToArray()));
+    var strings = new List<string>();
+    foreach (var i in permutation)
+        strings.Add(i.ToString());
+    Console.WriteLine(string.Join(" ", strings.ToArray()));
 }
 ```
 

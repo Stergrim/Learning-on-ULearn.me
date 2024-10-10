@@ -18,7 +18,7 @@ using System;
 namespace Geometry
 {
     public class Vector { public double X; public double Y; }
-
+    
     public class Geometry
     {
         public static double GetLength(Vector vec)

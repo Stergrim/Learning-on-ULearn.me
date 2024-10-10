@@ -3,8 +3,8 @@
 ```cs
 static int F(int x)
 {
-  	if (x % 10 == 0) return 0;
-  	return 1 + F(x / 10);
+   if (x % 10 == 0) return 0;
+   return 1 + F(x / 10);
 }
 ```
 
@@ -24,10 +24,10 @@ static int F(int x)
 ```cs
 static int G(int x, int y)
 {
-      if (y == 0)
-          return x;
-      else
-          return G(y, x % y);
+   if (y == 0)
+       return x;
+   else
+       return G(y, x % y);
 }
 ```
 

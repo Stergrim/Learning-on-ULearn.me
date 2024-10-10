@@ -28,7 +28,7 @@ namespace RoutePlanning
     {
         static double price = 0.0;
         static int[] temper;
-
+    
         public static int[] FindBestCheckpointsOrder(Point[] checkpoints)
         {
             var bestOrder = MakeTrivialPermutation(checkpoints.Length);
@@ -37,7 +37,7 @@ namespace RoutePlanning
             FindBestCheckpointsOrder(checkpoints, bestOrder, 1);
             return temper;
         }
-
+    
         public static void FindBestCheckpointsOrder(Point[] checkpoints, int[] bestOrder, int position)
         {
             if (position == bestOrder.Length)
@@ -60,7 +60,7 @@ namespace RoutePlanning
                 else FindBestCheckpointsOrder(checkpoints, bestOrder, position + 1);
             }
         }
-
+    
         public static int[] SubArray(int[] bestOrder, int position)
         {
             int[] subArray = new int[position];
@@ -68,7 +68,7 @@ namespace RoutePlanning
                 subArray[i] = bestOrder[i];
             return subArray;
         }
-
+    
         public static double Evaluate(Point[] checkpoints, int[] bestOrder, int position)
         {
             double temp = 0;
@@ -80,7 +80,7 @@ namespace RoutePlanning
             }
             return temp;
         }
-
+    
         private static int[] MakeTrivialPermutation(int size)
         {
             var bestOrder = new int[size];

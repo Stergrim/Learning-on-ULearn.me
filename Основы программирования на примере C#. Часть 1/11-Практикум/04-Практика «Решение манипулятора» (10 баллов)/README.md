@@ -70,7 +70,7 @@ namespace Manipulation
             return new[] { shoulder, elbow, wrist };
         }
     }
-
+   
     [TestFixture]
     public class ManipulatorTask_Tests
     {
@@ -101,7 +101,7 @@ namespace Manipulation
                 }
             }
         }
-	}
+    }
 }
 ```
 

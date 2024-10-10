@@ -28,7 +28,7 @@ namespace Manipulation
             return alpha;
         }
     }
-
+    
     [TestFixture]
     public class TriangleTask_Tests
     {

@@ -15,9 +15,9 @@
 ```cs
 public class MenuItem
 {
-	public string Caption;
-	public string HotKey;
-	public MenuItem[] Items;
+    public string Caption;
+    public string HotKey;
+    public MenuItem[] Items;
 }
 ```
 

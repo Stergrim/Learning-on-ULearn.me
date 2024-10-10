@@ -31,9 +31,9 @@ namespace TableParser
             var actualResult = FieldsParserTask.ParseLine(input);
             Assert.AreEqual(expectedResult.Length, actualResult.Count);
             for (int i = 0; i < expectedResult.Length; ++i)
-            	Assert.AreEqual(expectedResult[i], actualResult[i].Value);
+                Assert.AreEqual(expectedResult[i], actualResult[i].Value);
         }
-
+    
         [TestCase("text", new[] { "text" })]
         [TestCase("hello      world", new[] { "hello", "world" })]
         [TestCase("' ", new[] { " " })]
@@ -49,11 +49,11 @@ namespace TableParser
         [TestCase("'\"\"\"\"'", new[] { "\"\"\"\"" })]
         [TestCase(@"""\""", new[] { "\"" })]
         [TestCase("", new string[0])]
-
+    
         public static void RunTests(string input, string[] expectedOutput)
         { Test(input, expectedOutput); }
     }
-
+    
     public class FieldsParserTask
     {
         public static List<Token> ParseLine(string line)
@@ -64,7 +64,7 @@ namespace TableParser
                 startIndex = GetToken(list, line, startIndex);
             return list;
         }
-		
+        
         public static int GetToken(List<Token> list, string line, int startIndex)
         {
             if (line[startIndex] == '\'') {
@@ -82,7 +82,7 @@ namespace TableParser
                  }
             return startIndex;
         }
-
+    
         private static Token SimpleField(string line, int startIndex)
         {
             StringBuilder str = new StringBuilder();
@@ -95,13 +95,13 @@ namespace TableParser
             line = str.ToString();
             return new Token(line, startIndex, line.Length);
         }
-
+    
         private static Token QuotesFieldOne(string line, int startIndex)
         {
             StringBuilder str = new StringBuilder();
             int len = line.Length;
             int j = 0;
-
+    
             for (int i = startIndex + 1; i < len; i++)
             {
                 if (line[i] == '\'') { j++; break; }
@@ -111,7 +111,7 @@ namespace TableParser
             line = str.ToString();
             return new Token(line, startIndex, line.Length + 1 + j);
         }
-
+    
         private static Token QuotesFieldTwo(string line, int startIndex)
         {
             StringBuilder str = new StringBuilder();
@@ -126,7 +126,7 @@ namespace TableParser
             line = str.ToString();
             return new Token(line, startIndex, line.Length + 1 + j);
         }
-
+    
         private static int Space(string line, int startIndex)
         {
             int len = line.Length;
@@ -137,15 +137,15 @@ namespace TableParser
             }
             return startIndex;
         }
-
+    
         private static Token ReadField(string line, int startIndex)
         {
-		    return new Token(line, 0, line.Length);
+            return new Token(line, 0, line.Length);
         }
-
+    
         public static Token ReadQuotedField(string line, int startIndex)
         { 
-		    return QuotedFieldTask.ReadQuotedField(line, startIndex);
+            return QuotedFieldTask.ReadQuotedField(line, startIndex);
         }
     }
 }

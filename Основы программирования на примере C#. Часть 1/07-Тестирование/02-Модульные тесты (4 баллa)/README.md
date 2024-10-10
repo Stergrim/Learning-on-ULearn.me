@@ -26,8 +26,8 @@
 ```cs
 [TestMethod]
 public void Test(){
-	string givenName = NameAlgorithms.ExtractGivenName("Иванов Петр Владимирович");
-	Console.WriteLine(givenName); // "Иванов"
+   string givenName = NameAlgorithms.ExtractGivenName("Иванов Петр Владимирович");
+   Console.WriteLine(givenName); // "Иванов"
 }
 ```
 

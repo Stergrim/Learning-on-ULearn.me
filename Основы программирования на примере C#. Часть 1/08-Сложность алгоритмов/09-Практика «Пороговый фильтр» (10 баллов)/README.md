@@ -24,8 +24,8 @@ using System.Linq;
 
 namespace Recognizer
 {
-	public static class ThresholdFilterTask
-	{
+    public static class ThresholdFilterTask
+    {
         public static double[] GetVector(double[,] original, int lenY, int lenX)
         {
             int N = lenX * lenY;
@@ -39,7 +39,7 @@ namespace Recognizer
                 }
             return vector;
         }
-
+    
         public static double[,] GetMatrix(double[] vector, int lenY, int lenX)
         {
             double[,] image = new double[lenY, lenX];
@@ -52,7 +52,7 @@ namespace Recognizer
                 }
             return image;
         }
-
+    
         public static double[,] ThresholdFilter(double[,] original, double whitePixelsFraction)
         {
             int lenY = original.GetLength(0);
@@ -71,6 +71,6 @@ namespace Recognizer
             original = GetMatrix(vector, lenY, lenX);
             return original;
         }
-	}
+    }
 }
 ```

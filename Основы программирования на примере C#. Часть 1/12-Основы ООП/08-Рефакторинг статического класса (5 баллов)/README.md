@@ -5,10 +5,10 @@
 ```cs
 public static void Main()
 {
-	var filter = new SuperBeautyImageFilter();
-	filter.ImageName = "Paris.jpg";
-	filter.GaussianParameter = 0.4;
-	filter.Run();
+    var filter = new SuperBeautyImageFilter();
+    filter.ImageName = "Paris.jpg";
+    filter.GaussianParameter = 0.4;
+    filter.Run();
 }
 ```
 

@@ -5,8 +5,8 @@
 ```cs
 public static void Main()
 {
-	var arg1 = "100500";
-	Console.Write(arg1.ToInt() + "42".ToInt()); // 100542
+    var arg1 = "100500";
+    Console.Write(arg1.ToInt() + "42".ToInt()); // 100542
 }
 ```
 
@@ -14,7 +14,7 @@ public static void Main()
 ```cs
 public static class ToIntExtensions
 {
-	public static int ToInt(this String str) { return int.Parse(str); }
+    public static int ToInt(this String str) { return int.Parse(str); }
 }
 ```
 

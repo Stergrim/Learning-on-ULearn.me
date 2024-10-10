@@ -2,8 +2,8 @@
 
 ```cs
 class SomeClass {
-	public static int s;
-	public int d;
+   public static int s;
+   public int d;
 }
 ```
 

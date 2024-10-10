@@ -40,7 +40,7 @@ count = BinSearchRightBorder(arr, maxValue, -1, arr.Length) - BinSearchLeftBorde
 ```cs
 private static int FindLeftBorder(long[] arr, long value)
 {
-	return BinSearchLeftBorder(arr, value, -1, arr.Length);
+    return BinSearchLeftBorder(arr, value, -1, arr.Length);
 }
 ```
 

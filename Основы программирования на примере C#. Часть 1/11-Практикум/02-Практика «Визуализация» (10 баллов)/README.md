@@ -49,7 +49,7 @@ namespace Manipulation
                                                  Color.FromArgb(255, 230, 255, 230));
         public static Pen ManipulatorPen = new Pen(Brushes.Black, 3);
         public static Brush JointBrush = new SolidColorBrush(Colors.Gray);
-
+   
         public static void KeyDown(Visual display, KeyEventArgs key)
         {
             switch (key.Key)
@@ -152,7 +152,7 @@ namespace Manipulation
         
         public static Point ConvertMathToWindow(Point mathPoint, Point shoulderPos)
         { return new Point(mathPoint.X + shoulderPos.X, shoulderPos.Y - mathPoint.Y); }
-
+   
         public static Point ConvertWindowToMath(Point windowPoint, Point shoulderPos)
         { return new Point(windowPoint.X - shoulderPos.X, shoulderPos.Y - windowPoint.Y); }
     }

@@ -13,9 +13,9 @@
 ```cs
 public static void WriteReversed(char[] items, int startIndex = 0)
 {
-	if (startIndex == items.Length) return;
+    if (startIndex == items.Length) return;
     WriteReversed(items, startIndex + 1);
-    Console.Write(items[startIndex]); 
+    Console.Write(items[startIndex]);
 }
 ```
 
