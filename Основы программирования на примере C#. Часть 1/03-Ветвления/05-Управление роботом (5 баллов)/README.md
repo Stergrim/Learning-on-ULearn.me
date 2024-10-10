@@ -5,21 +5,21 @@
 ```cs
 public static bool ShouldFire(bool enemyInFront, string enemyName, int robotHealth)
 {
-	bool shouldFire = true;
-	if (enemyInFront == true)
-	{
-		if (enemyName == "boss")
-		{
-			if (robotHealth < 50) shouldFire = false;
-			if (robotHealth > 100) shouldFire = true;
-		}
-	}
-	else
-	{
-		return false;
-	}
-	return shouldFire;
-}
+    bool shouldFire = true;
+    if (enemyInFront == true)
+    {
+        if (enemyName == "boss")
+        {
+            if (robotHealth < 50) shouldFire = false;
+            if (robotHealth > 100) shouldFire = true;
+        }
+    }
+    else
+    {
+        return false;
+    }
+    return shouldFire;
+    }
 ```
 
 Код показался Васе слишком длинным, а к тому же еще и неряшливым. Вася поспорил с автором, что сможет написать функцию, делающую ровно то же самое, но всего в один оператор.
@@ -30,7 +30,7 @@ public static bool ShouldFire(bool enemyInFront, string enemyName, int robotHeal
 ```cs
 static bool ShouldFire2(bool enemyInFront, string enemyName, int robotHealth)
 {
-	return enemyInFront && (enemyName != "boss" || robotHealth  >= 50);
+    return enemyInFront && (enemyName != "boss" || robotHealth  >= 50);
 }
 ```
 

@@ -87,14 +87,14 @@ public static void Main()
 public static int[] GetBenfordStatistics(string text)
 {
     var statistics = new int[10];
-	for (int i = 0; i < text.Length; i++)
-	{
-		if (i == 0)
-			if (Char.IsDigit(text[i])) statistics[(int)Char.GetNumericValue(text[i])]++;
-		if (i != 0)
-			if ((Char.IsDigit(text[i])) && (text[i-1] == ' '))
-				statistics[(int)Char.GetNumericValue(text[i])]++;
-	}
+    for (int i = 0; i < text.Length; i++)
+    {
+        if (i == 0)
+            if (Char.IsDigit(text[i])) statistics[(int)Char.GetNumericValue(text[i])]++;
+        if (i != 0)
+            if ((Char.IsDigit(text[i])) && (text[i-1] == ' '))
+                statistics[(int)Char.GetNumericValue(text[i])]++;
+    }
     return statistics;
 }
 ```

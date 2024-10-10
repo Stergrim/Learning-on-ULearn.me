@@ -29,11 +29,11 @@ pop 26
 ```cs
 private static string ApplyCommands(string[] commands)
 {
-	StringBuilder str = new StringBuilder();
-	foreach (string s in commands)
-		if (s.StartsWith("push")) str.Append(s.Substring(s.IndexOf(' ') + 1));
-		else str.Length -= int.Parse(s.Split(' ')[1]);
-	return str.ToString();
+    StringBuilder str = new StringBuilder();
+    foreach (string s in commands)
+        if (s.StartsWith("push")) str.Append(s.Substring(s.IndexOf(' ') + 1));
+        else str.Length -= int.Parse(s.Split(' ')[1]);
+    return str.ToString();
 }
 ```
 

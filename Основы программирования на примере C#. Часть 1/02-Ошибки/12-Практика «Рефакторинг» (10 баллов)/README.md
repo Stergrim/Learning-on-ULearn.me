@@ -30,15 +30,15 @@ namespace RefactorMe
     {
         static float x, y;
         static IGraphics graphic;
-
+    
         public static void Initialize(IGraphics newGraphic)
         {
             graphic = newGraphic;
             graphic.Clear(Colors.Black);
         }
-
+    
         public static void SetPosition(float x0, float y0) { x = x0; y = y0; }
-
+    
         public static void MakeIt(Pen line, double lenth, double angle)
         {
             var x1 = (float)(x + lenth * Math.Cos(angle));
@@ -47,13 +47,13 @@ namespace RefactorMe
             x = x1;
             y = y1;
         }
-
+    
         public static void Change(double lenth, double angle)
         {
             x = (float)(x + lenth * Math.Cos(angle));
             y = (float)(y + lenth * Math.Sin(angle));
         }
-
+    
         public static void DrawLine(Pen line, double lenth, double angle)
         {
             Drawing.MakeIt(line, lenth * 0.375f, angle);
@@ -64,7 +64,7 @@ namespace RefactorMe
             Drawing.Change(lenth * 0.04f * Math.Sqrt(2), angle + 3 * Math.PI / 4);
         }
     }
-
+    
     public class ImpossibleSquare
     {
         public static void Draw(int width, int height, double angle, IGraphics graphic)

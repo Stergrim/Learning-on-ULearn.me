@@ -63,15 +63,15 @@ public static GameResult GetGameResult(Mark[,] field)
 {
     bool a = false;
     bool b = false;
-
+    
     if ((CircleCrossHorizont(field, 0)) ||
         (CircleCrossVetical(field, 0)) ||
         (CircleCrossDiagonal(field, 0))) a = true;
-
+    
     if ((CircleCrossHorizont(field, 1)) ||
         (CircleCrossVetical(field, 1)) ||
         (CircleCrossDiagonal(field, 1))) b = true;
-
+    
     if ((a && b)||(!a && !b)) return GameResult.Draw;
     else if (a) return GameResult.CircleWin;
     else return GameResult.CrossWin;
@@ -80,18 +80,18 @@ public static GameResult GetGameResult(Mark[,] field)
 public static bool CircleCrossHorizont (Mark[,] field, int a)
 {
     int[] subArray;
-
+    
     if (a == 0) subArray = new int[3] {2,2,2};
     else subArray = new int[3] {1,1,1};
-
+    
     int b = 0;
     bool c = false;
-
+    
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
             if (subArray[i] == (int)field[i,j]) b++;
-
+    
         if (b == 3)
         {
             c = true;
@@ -105,18 +105,18 @@ public static bool CircleCrossHorizont (Mark[,] field, int a)
 public static bool CircleCrossVetical (Mark[,] field, int a)
 {
     int[] subArray;
-
+    
     if (a == 0) subArray = new int[3] {2,2,2};
     else subArray = new int[3] {1,1,1};
-
+    
     int b = 0;
     bool c = false;
-
+    
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
             if (subArray[i] == (int)field[j,i]) b++;
-
+    
         if (b == 3)
         {
             c = true;
@@ -130,22 +130,22 @@ public static bool CircleCrossVetical (Mark[,] field, int a)
 public static bool CircleCrossDiagonal (Mark[,] field, int a)
 {
     int[] subArray;
-
+    
     if (a == 0) subArray = new int[3] {2,2,2};
     else subArray = new int[3] {1,1,1};
-
+    
     int b = 0;
     bool c = false;
-
+    
     for (int i = 0; i < 3; i++)
         if (subArray[i] == (int)field[i,i]) b++;
     if (b == 3) c = true;
     else b = 0;
-
+    
     for (int i = 0; i < 3; i++)
         if (subArray[i] == (int)field[i,2-i])b++;
     if (b == 3) c = true;
-
+    
     return c;
 }
 ```

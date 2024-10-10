@@ -31,8 +31,8 @@ public static void Main()
 private static string GetMinX(int a, int b, int c)
 {
     if (a > 0) return (-1.0*b/(2*a)).ToString();
-	if ((a == 0) && (b == 0) )  return "Also";
-	else return "Impossible";
+    if ((a == 0) && (b == 0) )  return "Also";
+    else return "Impossible";
 }
 ```
 

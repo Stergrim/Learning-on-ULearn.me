@@ -16,7 +16,9 @@ public static void Main()
 Все тесты пройдены, задача сдана:
 ```cs
 static string GetLastHalf(string text)
-{ return text.Substring(text.Length/2).Replace(" ", null); }
+{
+    return text.Substring(text.Length/2).Replace(" ", null);
+}
 ```
 
 Вывод программы:

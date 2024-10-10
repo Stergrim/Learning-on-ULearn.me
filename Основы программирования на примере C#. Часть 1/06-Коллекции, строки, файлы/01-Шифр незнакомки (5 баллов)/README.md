@@ -27,21 +27,21 @@
 ```cs
 private static string DecodeMessage(string[] lines)
 {
-	string[] subs = lines[0].Split();
-	List<string> list = new List<string>();
-	
-	for (int i = lines.Length-1; i >= 0; i--)
-	{
-		subs = lines[i].Split();
-		if (lines[i].Trim() != "")
-			for (int j = subs.Length-1; j >= 0; j--)
-				if (Char.IsUpper(subs[j], 0)) list.Add(subs[j]);
-	}
-	
-	string ans = "";
-	foreach(string s in list)
-		ans = ans + s + " ";
-	return ans;
+    string[] subs = lines[0].Split();
+    List<string> list = new List<string>();
+    
+    for (int i = lines.Length-1; i >= 0; i--)
+    {
+        subs = lines[i].Split();
+        if (lines[i].Trim() != "")
+            for (int j = subs.Length-1; j >= 0; j--)
+                if (Char.IsUpper(subs[j], 0)) list.Add(subs[j]);
+    }
+    
+    string ans = "";
+    foreach(string s in list)
+        ans = ans + s + " ";
+    return ans;
 }
 ```
 

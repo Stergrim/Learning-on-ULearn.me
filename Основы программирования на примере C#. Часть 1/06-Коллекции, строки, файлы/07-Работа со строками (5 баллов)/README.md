@@ -4,7 +4,7 @@
 string result=""; 
 for (int i=0; i<3; i++) 
 { 
-	result+=i.ToString() + ", "; 
+   result+=i.ToString() + ", "; 
 }
 ```
 

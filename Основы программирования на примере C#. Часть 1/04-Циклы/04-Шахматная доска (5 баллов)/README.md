@@ -18,11 +18,11 @@
 ```cs
 public static void Main()
 {
-	WriteBoard(8);
-	WriteBoard(1);
-	WriteBoard(2);
-	WriteBoard(3);
-	WriteBoard(10);
+    WriteBoard(8);
+    WriteBoard(1);
+    WriteBoard(2);
+    WriteBoard(3);
+    WriteBoard(10);
 }
 ```
 
@@ -30,14 +30,14 @@ public static void Main()
 ```cs
 private static void WriteBoard(int size)
 {
-	for (int y = 0; y < size; y++)
-	{
-		for (int x = 0; x < size; x++)
-			if ((x + y) % 2 == 0) Console.Write("#");
-			else Console.Write(".");
-		Console.WriteLine();
-	}
-	Console.WriteLine();
+    for (int y = 0; y < size; y++)
+    {
+        for (int x = 0; x < size; x++)
+            if ((x + y) % 2 == 0) Console.Write("#");
+            else Console.Write(".");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
 }
 ```
 

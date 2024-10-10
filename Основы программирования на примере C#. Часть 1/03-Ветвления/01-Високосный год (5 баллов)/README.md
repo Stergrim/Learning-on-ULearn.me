@@ -13,15 +13,15 @@
 ```cs
 public static void Main()
 {
-	Console.WriteLine(IsLeapYear(2014));
-	Console.WriteLine(IsLeapYear(1999));
-	Console.WriteLine(IsLeapYear(8992));
-	Console.WriteLine(IsLeapYear(1));
-	Console.WriteLine(IsLeapYear(14));
-	Console.WriteLine(IsLeapYear(400));
-	Console.WriteLine(IsLeapYear(600));
-	Console.WriteLine(IsLeapYear(3200));
-	FinalTesting(); // Тестирование решения на секретных тестах
+    Console.WriteLine(IsLeapYear(2014));
+    Console.WriteLine(IsLeapYear(1999));
+    Console.WriteLine(IsLeapYear(8992));
+    Console.WriteLine(IsLeapYear(1));
+    Console.WriteLine(IsLeapYear(14));
+    Console.WriteLine(IsLeapYear(400));
+    Console.WriteLine(IsLeapYear(600));
+    Console.WriteLine(IsLeapYear(3200));
+    FinalTesting(); // Тестирование решения на секретных тестах
 }
 ```
 

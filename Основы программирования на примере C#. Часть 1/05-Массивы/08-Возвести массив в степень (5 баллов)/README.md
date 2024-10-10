@@ -26,10 +26,10 @@ public static void Main()
 ```cs
 public static int[] GetPoweredArray(int[] arr, int power)
 {
-	int[] arrTemp = new int[arr.Length];
-	for (int i = 0; i < arr.Length; i++)
-		arrTemp[i] = (int)Math.Pow(arr[i], power);
-	return arrTemp;
+    int[] arrTemp = new int[arr.Length];
+    for (int i = 0; i < arr.Length; i++)
+        arrTemp[i] = (int)Math.Pow(arr[i], power);
+    return arrTemp;
 }
 ```
 

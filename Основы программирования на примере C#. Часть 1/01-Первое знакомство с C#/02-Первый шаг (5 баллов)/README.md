@@ -11,7 +11,9 @@
 Все тесты пройдены, задача сдана:
 ```cs
 public static void Main()
-{ Console.WriteLine("The first step!"); }
+{
+    Console.WriteLine("The first step!");
+}
 ```
 
 Вывод программы:

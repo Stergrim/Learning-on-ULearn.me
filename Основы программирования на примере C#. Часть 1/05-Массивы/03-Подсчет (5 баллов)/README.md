@@ -8,10 +8,10 @@
 ```cs
 public static int GetElementCount(int[] items, int itemToCount)
 {
-	int j = 0;
-	for (int i = 0; i < items.Length; i++)
-		if (items[i] == itemToCount) j++;
-	return j;
+    int j = 0;
+    for (int i = 0; i < items.Length; i++)
+        if (items[i] == itemToCount) j++;
+    return j;
 }
 ```
 

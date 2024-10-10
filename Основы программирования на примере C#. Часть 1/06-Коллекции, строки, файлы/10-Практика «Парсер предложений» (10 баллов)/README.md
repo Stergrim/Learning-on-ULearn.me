@@ -21,8 +21,8 @@ namespace TextAnalysis
 {
    static class SentencesParserTask
    {
-     public static List<List<string>> ParseSentences(string text)
-     {
+      public static List<List<string>> ParseSentences(string text)
+      {
          var sentencesList = new List<List<string>>();
          string[] temp = text.Split(new char[] { '.', '!', '?', ';', ':', '(', ')' });
          var length = temp.GetLength(0);
@@ -41,10 +41,10 @@ namespace TextAnalysis
              if (list.Count != 0) sentencesList.Add(list);
          }
          return sentencesList;
-     }
-     
-     public static void BuildString(List<string> list, string[] temp, StringBuilder word, int i, int j)
-     {
+      }
+        
+      public static void BuildString(List<string> list, string[] temp, StringBuilder word, int i, int j)
+      {
          if (!char.IsLetter(temp[i][j]) &&
              (temp[i][j] != '\'') &&
              (word.Length > 0) ||
@@ -58,7 +58,7 @@ namespace TextAnalysis
              list.Add(word.ToString());
              word.Clear();
          }
-     }
+      }
    }
 }
 ```

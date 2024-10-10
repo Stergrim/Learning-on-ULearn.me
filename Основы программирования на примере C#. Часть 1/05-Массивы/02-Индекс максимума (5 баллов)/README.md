@@ -22,18 +22,18 @@ static double Min(double[] array)
 ```cs
 public static int MaxIndex(double[] array)
 {
-	double max = 0;
-	int j = -1;
-	
-	for (int i = 0; i < array.Length; i++)
-	{
-		if (max < array[i])
-		{
-			max = array[i];
-			j = i;
-		}
-	}
-	return j;
+    double max = 0;
+    int j = -1;
+    
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (max < array[i])
+        {
+            max = array[i];
+            j = i;
+        }
+    }
+    return j;
 }
 ```
 

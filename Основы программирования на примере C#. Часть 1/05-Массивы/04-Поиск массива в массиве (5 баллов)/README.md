@@ -28,16 +28,16 @@ public static int FindSubarrayStartIndex(int[] array, int[] subArray)
 ```cs
 public static bool ContainsAtIndex(int[] array, int[] subArray, int i)
 {
-	bool a = false;
-	int b = 0;
-	
-	if (subArray.Length > 0)
-		if (array[i] == subArray[0])
-			for (int j = 0; j < subArray.Length; j++)
-				if (array[i+j] == subArray[j]) b++;
-	
-	if (b == subArray.Length) a = true;
-	return a;
+    bool a = false;
+    int b = 0;
+    
+    if (subArray.Length > 0)
+        if (array[i] == subArray[0])
+            for (int j = 0; j < subArray.Length; j++)
+                if (array[i+j] == subArray[j]) b++;
+    
+    if (b == subArray.Length) a = true;
+    return a;
 }
 ```
 

@@ -29,9 +29,9 @@ if (!IsNotPrimeNumber(p)) Console.WriteLine(p);
 ```cs
 bool F(bool a)
 {
-	if (a == true) return true;
-	else if (a == false) return false;
-	else return !true && !false;
+   if (a == true) return true;
+   else if (a == false) return false;
+   else return !true && !false;
 }
 ```
 

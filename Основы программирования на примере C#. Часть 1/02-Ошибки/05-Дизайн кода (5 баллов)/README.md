@@ -44,13 +44,13 @@ namespace StyleErrors
 ```cs
 namespace StyleErrors
 {
-	class Program
-	{
-		static public void Main()
-		{
-			var myinteger = "sotnya";
-		}
-	}
+    class Program
+    {
+        static public void Main()
+        {
+            var myinteger = "sotnya";
+        }
+    }
 }
 ```
 

@@ -20,7 +20,9 @@ public static void Main()
 Все тесты пройдены, задача сдана:
 ```cs
 private static string GetGreetingMessage(string name, double salary)
-{ return "Hello, " + name + ", your salary is " + Math.Ceiling(salary).ToString(); }
+{
+    return "Hello, " + name + ", your salary is " + Math.Ceiling(salary).ToString();
+}
 ```
 
 Вывод программы:

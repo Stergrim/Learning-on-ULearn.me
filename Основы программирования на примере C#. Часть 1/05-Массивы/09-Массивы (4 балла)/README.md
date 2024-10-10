@@ -3,10 +3,10 @@
 ```cs
 static void Main()
 {
-	var arr = new int[4];
-	for (var i = 0; i <= arr.Length; i++)
-		arr[i] = 0;
-	DoSomething(arr);
+   var arr = new int[4];
+   for (var i = 0; i <= arr.Length; i++)
+     arr[i] = 0;
+   DoSomething(arr);
 }
 ```
 

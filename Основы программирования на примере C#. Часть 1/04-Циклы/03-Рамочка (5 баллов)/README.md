@@ -13,11 +13,11 @@
 
 public static void Main()
 {
-	WriteTextWithBorder("Menu:");
-	WriteTextWithBorder("");
-	WriteTextWithBorder(" ");
-	WriteTextWithBorder("Game Over!");
-	WriteTextWithBorder("Select level:");
+    WriteTextWithBorder("Menu:");
+    WriteTextWithBorder("");
+    WriteTextWithBorder(" ");
+    WriteTextWithBorder("Game Over!");
+    WriteTextWithBorder("Select level:");
 }
 ```
 
@@ -25,18 +25,18 @@ public static void Main()
 ```cs
 private static void WriteTextWithBorder(string text)
 {
-	int length = text.Length + 2;
-	Console.Write("+");
-	for (int i = 0; i < length; i++)
-		Console.Write("-");
-	
-	Console.WriteLine("+");
-	Console.WriteLine("| " + text + " |");
-	Console.Write("+");
-	for (int i = 0; i < length; i++)
-		Console.Write("-");
-	
-	Console.WriteLine("+");
+    int length = text.Length + 2;
+    Console.Write("+");
+    for (int i = 0; i < length; i++)
+        Console.Write("-");
+    
+    Console.WriteLine("+");
+    Console.WriteLine("| " + text + " |");
+    Console.Write("+");
+    for (int i = 0; i < length; i++)
+        Console.Write("-");
+    
+    Console.WriteLine("+");
 }
 ```
 
