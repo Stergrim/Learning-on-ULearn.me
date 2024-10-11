@@ -23,41 +23,41 @@ namespace TextAnalysis
    {
       public static List<List<string>> ParseSentences(string text)
       {
-         var sentencesList = new List<List<string>>();
-         string[] temp = text.Split(new char[] { '.', '!', '?', ';', ':', '(', ')' });
-         var length = temp.GetLength(0);
-         StringBuilder word = new StringBuilder();
-         for (int i = 0; i < length; i++)
-         {
-             temp[i] = temp[i].ToLower();
-             temp[i] = Regex.Replace(temp[i], @"([^A-Za-z'])", " ");
-             var list = new List<string>();
-             for (int j = 0; j < temp[i].Length; j++)
-             {
-                 if (char.IsLetter(temp[i][j]) || (temp[i][j] == '\''))
-                     word.Append(temp[i][j]);
-                 BuildString(list, temp, word, i, j);
-             }
-             if (list.Count != 0) sentencesList.Add(list);
-         }
-         return sentencesList;
+            var sentencesList = new List<List<string>>();
+            string[] temp = text.Split(new char[] { '.', '!', '?', ';', ':', '(', ')' });
+            var length = temp.GetLength(0);
+            StringBuilder word = new StringBuilder();
+            for (int i = 0; i < length; i++)
+            {
+                temp[i] = temp[i].ToLower();
+                temp[i] = Regex.Replace(temp[i], @"([^A-Za-z'])", " ");
+                var list = new List<string>();
+                for (int j = 0; j < temp[i].Length; j++)
+                {
+                    if (char.IsLetter(temp[i][j]) || (temp[i][j] == '\''))
+                        word.Append(temp[i][j]);
+                    BuildString(list, temp, word, i, j);
+                }
+                if (list.Count != 0) sentencesList.Add(list);
+            }
+            return sentencesList;
       }
         
       public static void BuildString(List<string> list, string[] temp, StringBuilder word, int i, int j)
       {
-         if (!char.IsLetter(temp[i][j]) &&
-             (temp[i][j] != '\'') &&
-             (word.Length > 0) ||
-             (temp[i][j] == ','))
-         {
-             list.Add(word.ToString());
-             word.Clear();
-         }
-         else if ((j == temp[i].Length - 1) && (word.Length > 0))
-         {
-             list.Add(word.ToString());
-             word.Clear();
-         }
+            if (!char.IsLetter(temp[i][j]) &&
+                (temp[i][j] != '\'') &&
+                (word.Length > 0) ||
+                (temp[i][j] == ','))
+            {
+                list.Add(word.ToString());
+                word.Clear();
+            }
+            else if ((j == temp[i].Length - 1) && (word.Length > 0))
+            {
+                list.Add(word.ToString());
+                word.Clear();
+            }
       }
    }
 }
