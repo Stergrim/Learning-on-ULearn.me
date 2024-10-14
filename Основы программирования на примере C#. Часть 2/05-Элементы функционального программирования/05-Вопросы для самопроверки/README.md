@@ -10,7 +10,6 @@
 
 ```cs
 var list = new List<Action<int>>();
-
 list.Add((x) => Console.WriteLine(x));
 ```
 
