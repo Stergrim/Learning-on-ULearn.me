@@ -1,6 +1,6 @@
 # Задача 10
 
-$$M=\begin{pmatrix}a&b\cr c&d\cr\end{pmatrix}∈M_2​(R).$$
+Пусть $$M=\begin{pmatrix}a&b\cr c&d\cr\end{pmatrix}∈M_2​(R).$$
 
 Обозначим ***f(M)=a+100b+10000c+1000000d***.
 
