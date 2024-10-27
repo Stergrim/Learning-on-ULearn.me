@@ -6,7 +6,7 @@
 
 1. Произведение
 
-   $$\begin{pmatrix}1&2&3&4&5\cr4&5&1&2&3\cr\end{pmatrix}\begin{pmatrix}1&2&3&4&5\cr3&4&5&1&2\cr\end{pmatrix}$$
+$$\begin{pmatrix}1&2&3&4&5\cr4&5&1&2&3\cr\end{pmatrix}\begin{pmatrix}1&2&3&4&5\cr3&4&5&1&2\cr\end{pmatrix}$$
 
    (1 из 1 балла)
    * 🟢 `1,2,3,4,5` (Правильный ответ: 1,2,3,4,5)
