@@ -8,4 +8,4 @@
    * ❌ **{∅} и {x∈R∣x²+1=0}**
 
 
-$$\begin{pmatrix}4\cr5\cr6\cr\end{pmatrix}$$
+$$f(\begin{pmatrix}-1&2\cr3&1\cr\end{pmatrix}\begin{pmatrix}-1&2\cr3&1\cr\end{pmatrix})$$
