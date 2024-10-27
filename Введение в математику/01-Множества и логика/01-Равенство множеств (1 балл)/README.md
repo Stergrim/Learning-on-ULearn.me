@@ -8,4 +8,4 @@
    * ❌ **{∅} и {x∈R∣x²+1=0}**
 
 
-$$x↦\frac{1}{x^2+1}$$
+$$\begin{pmatrix}4\cr5\cr6\cr\end{pmatrix}$$
