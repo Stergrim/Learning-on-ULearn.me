@@ -33,13 +33,13 @@ public class RivalsTask
         while (queueOwned.Count != 0)
         {
             var playersQueue = queueOwned.Dequeue();
-            if (playersQueue.Location.X < 0 || playersQueue.Location.Y < 0 || !map.InBounds(playersQueue.Location)) continue;
+            if (playersQueue.Location.X < 0 || playersQueue.Location.Y < 0 || !map.InBounds(playersQueue.Location))
+                continue;
             if (map.Maze[playersQueue.Location.X, playersQueue.Location.Y] == MapCell.Wall) continue;
             if (visitedPoint.Contains(playersQueue.Location)) continue;
             visitedPoint.Add(playersQueue.Location);
             yield return new OwnedLocation(playersQueue.Owner, playersQueue.Location, playersQueue.Distance);
             if (hashChests.Contains(playersQueue.Location)) continue;
-    
             for (var dy = -1; dy <= 1; dy++)
                 for (var dx = -1; dx <= 1; dx++)
                     if (dx != 0 && dy != 0) continue;
