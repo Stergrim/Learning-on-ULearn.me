@@ -40,6 +40,8 @@ thread.Start();
 Пример:
 ```cs
 var func = new Func<int, double>(MakeWork);
+var result = func.BeginInvoke(1, null, null);
+var returnedValue = func.EndInvoke(result);
 ```
 
 5. Что происходит с тредом, когда он доходит до строчки с командой `EndInvoke`?
