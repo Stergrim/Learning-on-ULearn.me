@@ -14,7 +14,6 @@
 
 Все тесты пройдены, задача сдана:
 ```cs
-
 namespace Streams.Compression
 {
     public class CustomCompressionStream : Stream
