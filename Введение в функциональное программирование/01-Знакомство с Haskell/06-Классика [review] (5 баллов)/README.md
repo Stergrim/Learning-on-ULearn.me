@@ -1,25 +1,13 @@
-# У меня не компилируется!
+# Классика [review]
 
-Поправьте код так, чтобы он компилировался и считал корень квадратного уравнения.
+Напишите функцию, вычисляющую факториал числа, без использования `if-then-else`.
 
-Все тесты пройдены, задача сдана:
+Все тесты пройдены, решение ожидает код-ревью:
 ```hs
-a, b, c :: Double
-a = 3
-b = -14
-c = -5
-
-d :: Double
-d = b * b - 4 * a * c
-
-defaultValue :: Double
-defaultValue = 0
-
-x :: Double
-x = if d < 0 then defaultValue else (-b + (-sqrt d)) / (2 * a)
-
-showX = putStrLn ("x = " ++ show x)
--- функция-аналог .ToString() ^ преобразует значение в строку
+factorial :: Integer -> Integer
+factorial 0 = 1
+factorial 1 = 1
+factorial n = n * factorial (n-1)
 ```
 
 **Компиляция в GHC**

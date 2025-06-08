@@ -1,25 +1,17 @@
-# У меня не компилируется!
+# Знак числа
 
-Поправьте код так, чтобы он компилировался и считал корень квадратного уравнения.
+Начнём с крошечной функции `tellSign`. Она должна возвращать знак целого числа `n`:
+- если n = 0, то "zero"
+- если n > 0, то "positive"
+- если n < 0, то "negative"
+
 
 Все тесты пройдены, задача сдана:
 ```hs
-a, b, c :: Double
-a = 3
-b = -14
-c = -5
-
-d :: Double
-d = b * b - 4 * a * c
-
-defaultValue :: Double
-defaultValue = 0
-
-x :: Double
-x = if d < 0 then defaultValue else (-b + (-sqrt d)) / (2 * a)
-
-showX = putStrLn ("x = " ++ show x)
--- функция-аналог .ToString() ^ преобразует значение в строку
+tellSign :: Int -> String
+tellSign n =
+    if n < 0 then "negative" else 
+        if n > 0 then "positive" else "zero"
 ```
 
 **Компиляция в GHC**

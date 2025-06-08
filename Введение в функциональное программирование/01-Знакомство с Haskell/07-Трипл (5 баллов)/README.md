@@ -1,25 +1,26 @@
-# У меня не компилируется!
+# Трипл
 
-Поправьте код так, чтобы он компилировался и считал корень квадратного уравнения.
+Для получения первого или второго элемента пары в Haskell есть функции `fst` и `snd` соответственно:
+
+```hs
+> :t fst
+fst :: (a, b) -> a
+> :t snd
+snd :: (a, b) -> b
+```
+
+Напишите аналогичные функции для tuple из трёх элементов.
 
 Все тесты пройдены, задача сдана:
 ```hs
-a, b, c :: Double
-a = 3
-b = -14
-c = -5
+fst3 :: (x, y, z) -> x
+fst3 (x, y, z) = x
 
-d :: Double
-d = b * b - 4 * a * c
+snd3 :: (x, y, z) -> y
+snd3 (x, y, z) = y
 
-defaultValue :: Double
-defaultValue = 0
-
-x :: Double
-x = if d < 0 then defaultValue else (-b + (-sqrt d)) / (2 * a)
-
-showX = putStrLn ("x = " ++ show x)
--- функция-аналог .ToString() ^ преобразует значение в строку
+thd3 :: (x, y, z) -> z
+thd3 (x, y, z) = z
 ```
 
 **Компиляция в GHC**
