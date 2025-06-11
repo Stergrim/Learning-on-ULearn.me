@@ -49,7 +49,7 @@ compute env expr = case expr of
                           Nothing     -> error "Variable not found in environment"
     (Not e)          -> not (compute env e)
     (And e1 e2)      -> compute env e1 && compute env e2
-    (Or e1 e2)       -> compute env e1 || compute env e2)
+    (Or e1 e2)       -> compute env e1 || compute env e2
 ```
 
 Вы можете скачать [тесты для локального запуска](LFCompute.zip).
