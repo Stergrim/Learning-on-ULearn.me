@@ -1,6 +1,6 @@
 # Eq для HList [review]
 
-Реализуйте instance `Eq` для `HList`
+Реализуйте `instance Eq` для `HList`
 
 ```hs
 data HList (xs :: [*]) :: * where
