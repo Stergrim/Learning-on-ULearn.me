@@ -7,7 +7,7 @@
 **В этом задании вам нужно создать класс типов** `IntArray`, который будет включать типы, хранящие целые числа, и реализовать его instance'ы для каждой из следующих структур:
 - `[Int]`
 - `Array Int Int`
-- Один из `IntMap Int`, `Map Int Int`, `Data.HashMap Int Int` или любой другой разновидности массивов, которых в Haskell [много](wiki.haskell.org/Arrays)
+- Один из `IntMap Int`, `Map Int Int`, `Data.HashMap Int Int` или любой другой разновидности массивов, которых в Haskell [много](https://wiki.haskell.org/Arrays)
 
 **В классе `IntArray` должны быть методы для:**
 - создания из списка пар `[(index, value)]`
