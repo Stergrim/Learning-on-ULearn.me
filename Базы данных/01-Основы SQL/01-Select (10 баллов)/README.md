@@ -26,7 +26,7 @@
 Сортировка должны быть по возрастанию серии и номера паспорта.
 
 **Все тесты пройдены, задача сдана**
-```postgresql
+```psql
 Select
 passenger_id,
 Left(passenger_name, STRPOS(passenger_name, ' ') - 1) as first_name,
