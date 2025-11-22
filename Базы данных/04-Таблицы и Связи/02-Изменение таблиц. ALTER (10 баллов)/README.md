@@ -25,7 +25,7 @@
 - Чем плохо было название колонки published?
 
 **Все тесты пройдены, задача сдана:**
-```pgsql
+```sql
 -- Сначала удаляем значение по умолчанию
 Alter Table articles
 Alter Column published Drop Default;
