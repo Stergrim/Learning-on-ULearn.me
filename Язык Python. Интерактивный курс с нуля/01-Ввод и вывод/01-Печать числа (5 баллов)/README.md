@@ -33,20 +33,6 @@
 В «выходных данных» показано, что должна вывести ваша программа, чтобы её ответ был принят
 
 Все тесты пройдены, задача сдана:
-```python
-def visualComputeColor(address):
-	file = address
-	flow = read_flow(file)
-	img = computeImg(flow)	
-	cv2.imshow(file, img)
-	cv2.waitKey(0)
-```
-
 ```py
-def visualComputeColor(address):
-	file = address
-	flow = read_flow(file)
-	img = computeImg(flow)	
-	cv2.imshow(file, img)
-	cv2.waitKey(0)
+print(1000)
 ```
