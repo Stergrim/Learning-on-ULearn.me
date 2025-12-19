@@ -16,9 +16,7 @@
 - area name
 - published_at
 
-<p float="left"> <img src="DB_Example.png" width="800" /> </p>
-
-*В качестве URL используйте http://127.0.0.1:8000/scripts/XML_daily.asp*
+<p float="left"> <img src="DB_Example.png" width="1000" /> </p>
 
 *Ответ сохраните в папке student_works*
 
